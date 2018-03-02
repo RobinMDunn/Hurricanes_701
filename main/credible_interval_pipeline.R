@@ -26,7 +26,7 @@ true_curve_test <- lapply(test_data, true_curve_conversion_function)
 
 start_idx_passed <- 1
 end_idx_passed <- length(test_env)
-n_sim_curve_total <- 25
+n_sim_curve_total <- 350
 alpha_level <- 0.1
 
 args <- commandArgs(trailingOnly = TRUE)
@@ -51,6 +51,7 @@ for (name_tc in names(test_env)) {
     }
   }
 }
+
 
 output_pipeline <- credible_interval_pipeline(tc_full_sim_list = tc_full_sim_list,
                                           tc_true_path_list = tc_true_path_list,
